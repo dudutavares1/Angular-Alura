@@ -1,15 +1,22 @@
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { NovaTransferenciaComponent } from './nova-transferencia/nova-transferencia.component';
+
+import { PhotosModule } from './photos/photos.module';
+import { AppRoutingModule } from './app.routing.module';
+import { ErrorsModule } from './errors/errors.module';
 
 @NgModule({
-  declarations: [AppComponent, NovaTransferenciaComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    PhotosModule,
+    AppRoutingModule,
+    ErrorsModule
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
